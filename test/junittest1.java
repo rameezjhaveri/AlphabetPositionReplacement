@@ -11,28 +11,29 @@ public class junittest1 {
 		StringBuffer result2 = new StringBuffer();
 		String result = input;
 		result.toUpperCase()
-		.chars().mapToObj(x -> (int) x - 64)
+		.chars()
+		.mapToObj(x -> (int) x - 64)
 		.filter(x -> (x >= 1 && x <= 26))
 		.forEach(x -> result2.append(x + " "));
 		System.out.println(result2);
 		return result2.toString();
 	}
 
-/*	
-	// check to see there is a return type as string
-	@Test
-	public void test1_checkingInput() {
-		if (replaceLettersWithPosition("test input") == "test input") {
-			System.out.println("Test1 passed. Output is String");
-		} else {
-			fail("Return type is not a string");
-		}
-	}
-*/
-	
-	
+	/* Do not need to pass this test anymore
+	 * 
+	 * 
+	 * // check to see there is a return type as string
+	 * @Test public void test1_checkingInput() { if
+	 * (replaceLettersWithPosition("test input") == "test input") {
+	 * System.out.println("Test1 passed. Output is String"); } else {
+	 * fail("Return type is not a string"); } }
+	 */
+
 	// compare return with correct answer to check for accuracy
 	// done multiple times to ensure answer is not correct by chance
+	
+	
+	
 	@Test
 	public void test2_checkingAnswer() {
 		if (replaceLettersWithPosition("abc").equals("1 2 3 ")) {
